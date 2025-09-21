@@ -1,0 +1,479 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Elsie:wght@400;900&family=Mystery+Quest&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #fff;
+    --snd-bg-color: #d5fdf9;
+    --text-color: #000;
+    --main-color: #ddee44;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/*Header Section Code*/
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background-image: url(fots.jpg);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-family: 'Elsie';
+    font-size: 3rem;
+    font-weight: 700;
+    color: #fffad0;
+    text-shadow: 2px 2px 5px hsl(94, 31%, 26%);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05)
+}
+
+.navbar a {
+    font-size: 1.9rem;
+    color: #fffad0;
+    text-shadow: 2px 2px 5px hsl(94, 32%, 13%);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: #7d392a;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: var(--bg-color);
+    cursor: pointer;
+    display: none;
+}
+
+/*Home Selection*/
+.home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-img img {
+    width: 25vw;
+    border-radius: 500px;
+    box-shadow: 0 0 25px var(--main-color);
+    cursor: pointer;
+    animation: floatImage 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+.home-img img:hover {
+    box-shadow: 0 0 25px var(--main-color),
+                0 0 35px var(--main-color),
+                0 0 45px var(--main-color);
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+.home-content {
+    margin-left: 5rem;
+}
+
+.home-content h3 {
+    font-size: 3.7rem;
+    font-weight: 700;
+}
+.home-content h3:nth-of-type(2) {
+    margin-bottom: 2rem;
+}
+span {
+    font-family: 'Mystery Quest';
+    color: rgb(79, 143, 40);
+}
+
+.home-content h1 {
+    font-size: 6rem;
+    font-weight: 700;
+    line-height: 1.3;
+    font-family: 'Elsie';
+    color: rgb(139, 104, 64);
+}
+
+.home-content p {
+    font-size: 1.8rem;
+    color: #916D4F;
+    font-family: 'Sour Gummy';
+}
+
+.social-media a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 42px;
+    height: 42px;
+    background: transparent;
+    border: 0.2rem solid #9ab537;
+    border-radius: 50%;
+    font-size: 2rem;
+    color: #9ab537;
+    margin: 3rem 1.5rem 3rem;
+    transition: 0.3s ease;
+}
+
+.social-media a:hover {
+    transform: scale(1.2) translateY(-10px);
+    background-color: #9ab537;
+    color: var(--bg-color);
+    box-shadow: 0 0 25px #9ab537;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background: #9ab537;
+    border-radius: 4rem;
+    box-shadow: none;
+    font-size: 1.6rem;
+    color: var(--bg-color);
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    box-shadow: 0 0 25px #9ab537;
+}
+
+/*About Section*/
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background-image: linear-gradient(#ffeabb, #fff9ec, #ffeabb); 
+}
+
+.about-img img {
+    width: 25vw;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.heading {
+    font-size: 6rem;
+    text-align: center; 
+}
+
+.about-content {
+    padding: 0 4rem;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content h3 {
+    font-size: 3rem;
+}
+
+.about-content p {
+    font-size: 2rem;
+    color: #916D4F;
+    margin: 2rem 0 3rem;
+    font-family: 'sour gummy';
+}
+
+.btn {
+    transition: 0.3s ease;
+}
+
+.btn:hover{
+transform: scale(1.05);
+}
+
+/*Read More Section*/
+
+.readmore {
+    background-image: url(sakura.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.readmore-box {
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.readmore .heading  {
+    margin-bottom: 5rem;
+}
+
+.readmore-box img {
+    width: 15rem;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.readmore-item {
+    min-height: 250px;
+    max-width: 450px;
+    background: #fbf4e4;
+    border: 0.3rem solid #fbf4e4;
+    border-radius: 2rem;
+    margin: 0 2rem;
+    padding: 20px 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    color: var(--text-color);
+    transition: 0.3s ease;
+}
+
+.readmore-item:hover {
+    border-color: #9ab537;
+    transform: scale(1.02);
+}
+.readmore-item h2 {
+    font-size: 3rem;
+    font-family: 'Elsie';
+    color: #fbfad4;
+    background-color: #9ab537;
+}
+
+.readmore-item p {
+    font-size: 1.5rem;
+    text-align: center;
+    color: #916D4F;
+    font-family: 'Sour Gummy';
+}
+
+/*CONTACT*/
+.contact-title
+{
+    color: #8ab377;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+  padding: 50px 20px;
+  background-image: url(green.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#contact .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.contact-title {
+    margin-top: 20px;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    font-family: 'Elsie';
+    color: #b46a5a;
+}
+
+.contact h2 {
+    margin-top: 50px;
+    font-size: 4rem;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+form {
+    max-width: 600px;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ff6347;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #bc3f2f;
+  transform: scale(1.05)
+}
+
+/* Footer */
+footer {
+    font-size: medium;
+    text-shadow: 2px 2px 5px rgb(71, 28, 13);
+  background-image: url(red.jpg);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Responsive Code */
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 991px) {
+    .header {
+        padding: 2rem 3%
+    }
+    .section {
+        padding: 10rem 3%;
+    }
+    .readmore .wrapper {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container .contact-form input {
+        width: 100%;
+    }
+    .footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media (max-width: 991px) {
+    #menu-icon {
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-image: url(fots.jpg);
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+    }
+
+    .navbar a {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }
+    .navbar.active {
+        right: 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 5rem;
+    }
+    .home-content {
+        order: 2;
+        margin-left: 1rem;
+    }
+    .home-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column-reverse;
+    }
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 450px) {
+    .home-img img {
+        width: 70vw;
+        margin-top: 8rem;
+    }
+    .about-img img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+}
+
+@media (max-width: 617px) {
+    html {
+        font-size: 50%;
+    }
+}
